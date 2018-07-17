@@ -12,7 +12,7 @@
   position: absolute;
   left: 0; right: 0;
   top: 0; bottom: 0;
-  background: rgba(56,58,78,.95);
+  background: black;
 }
 .movie-header-backdrop{
   position: absolute;
@@ -41,17 +41,18 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  background: black;
 }
 .blank-profile{
   width: 66px;
   height: 66px;
-  background-color: #dbdbdb;
+  background-color: white;
   border-radius: 50px;
   margin: 0 auto;
 }
 .name-title{
   font-weight: 500;
-  color: black;
+  color: white;
   margin: 0px;
 }
 .credits{
@@ -86,6 +87,7 @@
 }
 .name-title-sub{
   margin: 0px;
+  color: white;
 }
 .movie-content{
   display: flex;
@@ -131,7 +133,7 @@
 }
 h4.info-title{
   text-transform: uppercase;
-  color: #7b828b;
+  color: white;
   font-weight: 500;
 }
 .movie-watchBtn{

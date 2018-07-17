@@ -5,7 +5,6 @@ import {MovieTitle} from './MovieTitle'
 import {MoviePoster} from './MoviePoster'
 import {Directors} from './Directors'
 import {Actors} from './Actors'
-import {Genre} from './Genre'
 import {Runtime} from './Runtime'
 
 
@@ -18,7 +17,6 @@ class Movie extends Component {
     super();
     this.state = {
       movie: {
-        "genres": [{}],
         "production_companies": [{}],
         "production_countries": [{}],
         "spoken_languages": [{}],
@@ -124,8 +122,6 @@ class Movie extends Component {
                 runtime={this.state.movie.runtime}
                 />
 
-                <Genre 
-                genres={this.state.movie.genres}/>
                 
               </div>
               

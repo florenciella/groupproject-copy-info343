@@ -273,7 +273,7 @@ class App extends Component {
         />
         
 
-        <div className="movie-note">
+        <div className="moviedb">
         
           <div className="header">
 

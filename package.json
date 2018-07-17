@@ -1,5 +1,5 @@
 {
-  "name": "movie-note",
+  "name": "moviedb",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {

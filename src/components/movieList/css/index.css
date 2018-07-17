@@ -1,6 +1,6 @@
 /*movie search list*/
 .top-results{
-  background-color: #efeef1;
+  background-color: white;
 }
 .top-results p{
   padding-left: 10px;
@@ -13,16 +13,17 @@
   max-height: 520px;
   overflow-y: scroll;
   width: 390px;
+  background-color: black;
 }
 .movie-module-wrapper{
-  background-color: #faf9fa;
+  background-color: white;
   display: block;
   padding: 13px 10px 10px 10px;
-  color: #252937;
+  color: white;
 
 }
 .movie-module-wrapper:hover{
-  background-color: #252937;
+  background-color: gray;
   color: white;
 }
 .movie-module-wrapper:hover .module-title h4{

@@ -23,14 +23,14 @@ body {
 }
 .sidebar{
   min-width: 300px;
-  background-color: #2a2c3c;
+  background-color: black;
 }
 .header{ 
   width: 100%;
   display: flex;
   height: 70px;
   align-items: center;
-  background-color: #212330;
+  background-color: black;
   justify-content: space-between;
 }
 .main{
@@ -46,10 +46,10 @@ hr{
 /*movie landing page*/
 
 .button{
-  background-color: #cc7b19;
+  background-color: #33FF00;
   background-image: none;
   text-transform: uppercase;
-  border: solid 1px #cc7b19;
+  border: solid 1px #33FF00;
   padding: 5px 15px;
   border-radius: 3px;
   cursor: pointer;
@@ -57,16 +57,14 @@ hr{
   font-weight: 500;
 }
 .button:hover{
-  background-color: #ff9104;
-  border: solid 1px #ff9104;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  background-color: #66FF66;
+  border: solid 1px #66FF66;
 }
 
 
 /*auth*/
 .auth-form{
-  background-color: #212330;
-  border: #383a4e solid 3px;
+  background-color: black;
   padding: 20px;
   color: white;
   width: 500px;
@@ -87,8 +85,8 @@ hr{
 }
 .auth-form .form-group input{
   padding: 10px 15px;
-  border: #383a4e solid 2px;
-  background-color: #212330;
+  border: black solid 2px;
+  background-color: black;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -109,11 +107,11 @@ color: white;
 color: white;  
 }
 .modal-warning a{
-  color: #ff9104;
+  color: #66FF66;
   text-decoration: none;
 }
 .modal-warning a:hover{
-  color: #ff9104;
+  color: #66FF66;
 }
 .login-user{
   padding-right: 20px;

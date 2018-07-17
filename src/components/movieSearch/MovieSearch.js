@@ -19,7 +19,7 @@ class MovieSearch extends Component {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            backgroundColor: '#212330'
+            backgroundColor: 'black'
         }
         return (
             <div className="search-field">

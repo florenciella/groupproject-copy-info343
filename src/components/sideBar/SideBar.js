@@ -47,7 +47,7 @@ class SideBar extends Component {
   
       return (
         <div className={this.props.sideBar}> 
-          <div className="movie-note">
+          <div className="moviedb">
         
             <div className="login-user-mobile">
               <LoginButtons 
@@ -60,7 +60,7 @@ class SideBar extends Component {
             
             
             <div className="sidebar-title">
-              <h2><Link className="sidebar-title" onlyActiveOnIndex activeStyle={{backgroundColor: '#383a4e', color:'#ff9104'}} to="/">Home</Link></h2>
+              <h2><Link className="sidebar-title" onlyActiveOnIndex activeStyle={{backgroundColor: 'black', color:'#33FF00'}} to="/">Home</Link></h2>
             </div>
             <div className="watchlist-title">
               <h2>Watchlist</h2>
@@ -71,7 +71,7 @@ class SideBar extends Component {
                   return (
                   <li className="watchlist-module" key={movie.id}>
                     <input className="checkbox" type="checkbox" onChange={() => this.props.removeMovie(movie.id)} defaultChecked={movie.remove}/> 
-                    <Link activeStyle={{backgroundColor: '#383a4e', color: '#ff9104'}} to={`/movie/${movie.id}`}>
+                    <Link activeStyle={{backgroundColor: 'black', color: '#33FF00'}} to={`/movie/${movie.id}`}>
                       {movie.title}
                     </Link>
                   </li>
