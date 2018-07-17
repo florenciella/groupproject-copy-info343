@@ -1,5 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6,p,li,a{
+  font-family: 'Roboto', sans-serif;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+/*main overall*/
+
+.app{
+  display: flex;
+}
+.sidebar{
+  min-width: 300px;
+  background-color: #2a2c3c;
+}
+.header{ 
+  width: 100%;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  background-color: #212330;
+  justify-content: space-between;
+}
+.main{
+  width: 100%;
+}
+hr{
+  border: 0px;
+  height: 1px;
+  background-color: #efefef;
+}
+
+
+/*movie landing page*/
+
+.button{
+  background-color: #cc7b19;
+  background-image: none;
+  text-transform: uppercase;
+  border: solid 1px #cc7b19;
+  padding: 5px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.button:hover{
+  background-color: #ff9104;
+  border: solid 1px #ff9104;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/*auth*/
+.auth-form{
+  background-color: #212330;
+  border: #383a4e solid 3px;
+  padding: 20px;
+  color: white;
+  width: 500px;
+}
+.auth-form .button{
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0px;
+}
+.auth-form h1{
+  font-size: 21px;
+  margin: 0px 0px 20px 0px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.auth-form .form-group{
+  margin: 10px 0px;
+}
+.auth-form .form-group input{
+  padding: 10px 15px;
+  border: #383a4e solid 2px;
+  background-color: #212330;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  box-sizing : border-box;
+  width: 100%;
+  color: white;
+}
+.auth-form input::-webkit-input-placeholder {
+  color: white;
+}
+.auth-form input:-moz-placeholder { /* Firefox 18- */
+  color: white;  
+}
+.auth-form input::-moz-placeholder {  /* Firefox 19+ */
+color: white;  
+}
+.auth-form input:-ms-input-placeholder {  
+color: white;  
+}
+.modal-warning a{
+  color: #ff9104;
+  text-decoration: none;
+}
+.modal-warning a:hover{
+  color: #ff9104;
+}
+.login-user{
+  padding-right: 20px;
+  flex: 1;
+  text-align: right;
+}
+.login-user .button{
+  margin-left: 15px;
+}
+
+
+/*mobile*/
+@media screen and (max-width: 950px){
+  .sidebar{
+    display: none;
+  }
+}
+@media screen and (max-width: 950px){
+  .login-user{
+    display: none;
+  }
+}
+@media screen and (max-width: 950px){
+  .Movie-Search{
+    flex: 1;
+    margin: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .auth-form{
+    width: 230px;
+  }
+}
+
+.sidebar.show{
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
 }
