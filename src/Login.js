@@ -4,6 +4,7 @@ import { login, resetPassword } from './auth'
 export default class Login extends Component {
   constructor(props){
     super();
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
   state = { loginMessage: null }
   handleSubmit = (e) => {
@@ -14,7 +15,9 @@ export default class Login extends Component {
           this.setState({loginMessage:'You need to register first.'})
         })
   }
-
+  handleCloseModal () {
+    this.props.closeModal();
+  }
   render () {
     //log in with email
     return (
@@ -31,6 +34,7 @@ export default class Login extends Component {
             <i>{this.state.loginMessage}</i>
           </div>
           <button type="submit" className="button">Login</button>
+          <button onClick={this.handleCloseModal} className="button">Close</button>
         </form>
       </div>
     )

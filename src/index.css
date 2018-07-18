@@ -101,19 +101,25 @@ hr {
   color: white;
 }
 
+<<<<<<< HEAD
 .auth-form input::placeholder {
   color: #666;
+=======
+.auth-form input::-webkit-input-placeholder {
+  color: gray;
+>>>>>>> 3986e33a2b85b0568c3377f10f06b264fda51651
 }
 
 .auth-form input:-moz-placeholder { /* Firefox 18- */
-  color: white;
+  color: gray;
 }
 
 .auth-form input::-moz-placeholder {  /* Firefox 19+ */
-color: white;
+color: gray;
 }
 
 .auth-form input:-ms-input-placeholder {
+<<<<<<< HEAD
 color: white;
 }
 
@@ -121,6 +127,9 @@ color: white;
   margin-top: 4px;
   margin-bottom: 4px;
   color: red;
+=======
+color: gray;
+>>>>>>> 3986e33a2b85b0568c3377f10f06b264fda51651
 }
 
 .login-user{
@@ -151,7 +160,7 @@ color: white;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 .recent-movie{
@@ -500,7 +509,11 @@ img.module-poster-img{
 }
 
 .search-field input::placeholder {
+<<<<<<< HEAD
   color: #666;
+=======
+  color: gray;
+>>>>>>> 3986e33a2b85b0568c3377f10f06b264fda51651
 }
 
 .moviedb{

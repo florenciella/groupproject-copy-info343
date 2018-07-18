@@ -11,6 +11,8 @@ export default class Register extends Component {
   constructor(props){
     super();
     this.state = { registerError: null }
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+
   }
 
   handleSubmit = (e) => {
@@ -18,6 +20,9 @@ export default class Register extends Component {
     auth(this.email.value, this.pw.value)
       .then(()=>{this.props.closeModal();})
       .catch(e => this.setState(setErrorMsg(e)))
+  }
+  handleCloseModal () {
+    this.props.closeModal();
   }
 
   render () {
@@ -39,6 +44,7 @@ export default class Register extends Component {
             </div>
           }
           <button type="submit" className="button">Register</button>
+          <button onClick={this.handleCloseModal} className="button">Close</button>
         </form>
       </div>
     )
