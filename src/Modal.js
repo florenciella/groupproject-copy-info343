@@ -9,7 +9,9 @@ class Modal extends Component {
     }
   }
 
-  render() {
+  render() {    
+    if (this.props.isOpen === false)
+    return null
       let modalStyle = {
         position: 'absolute',
         top: '50%',
