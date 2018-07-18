@@ -48,47 +48,32 @@ class App extends Component {
   }
 
   componentWillMount(){
-    // Called the first time the component is loaded right before the component is added to the page
-
-    // Listen to auth state changes
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
 
-        // this.setLogInMessage()
         this.loggedIn()
-
         let username = modifyText(firebaseUser.email, '@')
         this.setState({userName:username})
-
         let self = this
         let ref = firebase.database().ref().child('/users/'+firebaseUser.uid)
         let watchRef = ref.child('watchlist')
-
-        // if there is no data in the database ignore this bottom part
-
         watchRef.on('value', function(snapshot){
-
           let watchList = []
           let movies = snapshot.val()
           let keys = Object.keys(movies)
-
           keys.map(function(key){
             watchList.push(movies[key])
             return watchList
           })
-
           if( watchList != null){
             self.setState({
               watchList: watchList
             })
           }
-
         })
 
       } else {
         this.loggedOut()
-        // this.setLogOutMessage()
-
       }
     });
 

@@ -4,9 +4,12 @@ import { login, resetPassword } from './auth'
 export default class Login extends Component {
   constructor(props){
     super();
+    this.state = { loginMessage: null }
+    
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-  state = { loginMessage: null }
+
+
   handleSubmit = (e) => {
     e.preventDefault()
     login(this.email.value, this.pw.value)
