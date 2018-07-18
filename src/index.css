@@ -100,28 +100,19 @@ hr {
 }
 
 .auth-form input::-webkit-input-placeholder {
-  color: white;
+  color: gray;
 }
 
 .auth-form input:-moz-placeholder { /* Firefox 18- */
-  color: white;
+  color: gray;
 }
 
 .auth-form input::-moz-placeholder {  /* Firefox 19+ */
-color: white;
+color: gray;
 }
 
 .auth-form input:-ms-input-placeholder {
-color: white;
-}
-
-.modal-warning a{
-  color: #66FF66;
-  text-decoration: none;
-}
-
-.modal-warning a:hover{
-  color: #66FF66;
+color: gray;
 }
 
 .login-user{
@@ -152,7 +143,7 @@ color: white;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 .recent-movie{
@@ -504,7 +495,7 @@ img.module-poster-img{
 }
 
 .search-field input::placeholder {
-  color: white;
+  color: gray;
 }
 
 .moviedb{
