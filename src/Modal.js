@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Modal extends Component {
-
   close = (e) => {
     e.preventDefault()
 
@@ -11,9 +10,6 @@ class Modal extends Component {
   }
 
   render() {
-    if (this.props.isOpen === false)
-      return null
-
       let modalStyle = {
         position: 'absolute',
         top: '50%',
@@ -22,7 +18,7 @@ class Modal extends Component {
         zIndex: '9999', // stacks on top
         background: '#fff'
       }
-  
+
       return (
         <div className={this.props.containerClassName}>
             <div className={this.props.className} style={modalStyle}>
@@ -34,7 +30,7 @@ class Modal extends Component {
         </div>
       )
   }
-  
+
 }
 
 export default Modal;

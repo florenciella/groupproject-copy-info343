@@ -1,16 +1,15 @@
-import firebase from 'firebase'; 
-const config = {  
-    apiKey: "AIzaSyAzz_lTd7kkN8iw9hgyPD5PNqRncR84vAM",
-    authDomain: "info343-a0739.firebaseapp.com",
-    databaseURL: "https://info343-a0739.firebaseio.com",
-    projectId: "info343-a0739",
-    storageBucket: "info343-a0739.appspot.com",
-    messagingSenderId: "819298865712"
-};
+import firebase from 'firebase';
 
+var config = {
+    apiKey: "AIzaSyBR8lXWfvLdL5c92Wh9zWZKLvQjw6p6eZk",
+    authDomain: "info343-group-project.firebaseapp.com",
+    databaseURL: "https://info343-group-project.firebaseio.com",
+    projectId: "info343-group-project",
+    storageBucket: "info343-group-project.appspot.com",
+    messagingSenderId: "88808852141"
+  };
 
 export const fire = firebase.initializeApp(config);
-
 export const ref = firebase.database().ref()
 export const firebaseAuth = firebase.auth
 

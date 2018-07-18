@@ -15,13 +15,13 @@ class MovieSearch extends Component {
               <i className="material-icons">
 search
 </i>
-                <form>
-                    <input type="text"
-                    onChange={this.props.updateSearch}
-                    value={this.props.searchValue}
-                    placeholder="Search movies..."
-                    />
-                </form>
+              <form>
+                  <input type="text"
+                  onChange={this.props.updateSearch}
+                  value={this.props.searchValue}
+                  placeholder="Search movies..."
+                  />
+              </form>
             </div>
         )
     }

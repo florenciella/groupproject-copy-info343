@@ -53,10 +53,10 @@ class SideBar extends Component {
             <div className="sidebar-title">
               <h2><Link onlyActiveOnIndex to="/"><i className="material-icons">
 home
-</i>Home</Link></h2>
+</i>Watchlist</Link></h2>
             </div>
             <div className="watchlist-title">
-              <h2>My Watchlist</h2>
+              <h2>My movies</h2>
             </div>
             <div className="watchlist">
               <ul>
