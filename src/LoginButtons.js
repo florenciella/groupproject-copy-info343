@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 export default class LoginButtons extends Component {
-  constructor(props){
-    super();
-  }
   
-
   render () {
     return (
       <div>
@@ -13,7 +9,7 @@ export default class LoginButtons extends Component {
             <div>
                 <button className="button" onClick={this.props.openModalLogin}>Login</button>
                 <button className="button" onClick={this.props.openModalRegister}>Register</button>
-            </div> 
+            </div>
         ) : (
             <button className="button" onClick={this.props.handleLogOut}>Log Out</button>
         )}
@@ -21,7 +17,3 @@ export default class LoginButtons extends Component {
     )
   }
 }
-
-
-
-

@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import {Menu} from '.././menu/Menu'
-import LoginButtons from '.././loginButtons/LoginButtons'
-
 import { Link } from 'react-router';
 
-import './css/index.css'
-import '.././menu/index.css'
+import {Menu} from './Menu'
+import LoginButtons from './LoginButtons'
 
 class SideBar extends Component {
-    state = {
-    }
     constructor(props){
       super()
       this.state = {
@@ -19,48 +14,46 @@ class SideBar extends Component {
     }
 
     handleResize(e) {
-        const winWidth = window.innerWidth
-        const maxWidth = 950
+      const winWidth = window.innerWidth
+      const maxWidth = 950
 
-        if(winWidth >= maxWidth){
-         this.props.showMenu()
-        }else{
+      if(winWidth >= maxWidth){
+       this.props.showMenu()
+      }else{
 
-        } 
+      }
 
-        this.setState({
-        windowWidth: window.innerWidth
-        });
+      this.setState({
+      windowWidth: window.innerWidth
+      });
     }
 
     componentDidMount() {
-        window.addEventListener('resize', this.handleResize.bind(this))
+      window.addEventListener('resize', this.handleResize.bind(this))
 
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize.bind(this))
+      window.removeEventListener('resize', this.handleResize.bind(this))
     }
 
-
     render () {
-  
+
       return (
-        <div className={this.props.sideBar}> 
+        <div className={this.props.sideBar}>
           <div className="moviedb">
-        
             <div className="login-user-mobile">
-              <LoginButtons 
-              loggedIn={this.props.loggedIn} 
+              <LoginButtons
+              loggedIn={this.props.loggedIn}
               openModalLogin={this.props.openModalLogin}
               openModalRegister={this.props.openModalRegister}
               handleLogOut={this.props.handleLogOut}
               />
             </div>
-            
-            
             <div className="sidebar-title">
-              <h2><Link className="sidebar-title" onlyActiveOnIndex activeStyle={{backgroundColor: 'black', color:'#33FF00'}} to="/">Home</Link></h2>
+              <h2><Link onlyActiveOnIndex to="/"><i className="material-icons">
+home
+</i>Home</Link></h2>
             </div>
             <div className="watchlist-title">
               <h2>Watchlist</h2>
@@ -70,8 +63,8 @@ class SideBar extends Component {
                 {this.props.watchList.map((movie)=>{
                   return (
                   <li className="watchlist-module" key={movie.id}>
-                    <input className="checkbox" type="checkbox" onChange={() => this.props.removeMovie(movie.id)} defaultChecked={movie.remove}/> 
-                    <Link activeStyle={{backgroundColor: 'black', color: '#33FF00'}} to={`/movie/${movie.id}`}>
+                    <input className="checkbox" type="checkbox" onChange={() => this.props.removeMovie(movie.id)} defaultChecked={movie.remove}/>
+                    <Link to={`/movie/${movie.id}`}>
                       {movie.title}
                     </Link>
                   </li>
@@ -82,7 +75,7 @@ class SideBar extends Component {
           </div>
         </div>
       )
-    } 
+    }
 }
 
 export default SideBar;

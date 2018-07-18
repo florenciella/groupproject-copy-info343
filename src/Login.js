@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
-import {auth} from '../../lib/auth'
+import { login, resetPassword } from './auth'
+
 
 function setErrorMsg(error) {
   return {
-    registerError: error.message
+    loginMessage: error
   }
 }
 
-export default class Register extends Component {
-
+export default class Login extends Component {
   constructor(props){
     super();
   }
-  
-  state = { registerError: null }
+  state = { loginMessage: null }
   handleSubmit = (e) => {
     e.preventDefault()
-    auth(this.email.value, this.pw.value)
+    login(this.email.value, this.pw.value)
       .then(()=>{this.props.closeModal();})
-      .catch(e => this.setState(setErrorMsg(e)))
-  }
-
-  componentWillMount(){
-
+      .catch((error) => {
+          this.setState(setErrorMsg('Invalid username/password.'))
+        })
   }
 
   render () {
+    //log in with email
     return (
       <div className="auth-form">
-        <h1>Register</h1>
+        <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
@@ -37,16 +35,16 @@ export default class Register extends Component {
             <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
           </div>
           {
-            this.state.registerError &&
+            this.state.loginMessage &&
+            //Alerts the user if the password is wrong
             <div className="modal-warning" role="alert">
-              <span className="sr-only">Error:</span>
-              &nbsp;{this.state.registerError}
+              <span className="sr-only">Error: Invalid Username/Password</span>
+              &nbsp;{this.state.loginMessage}
             </div>
           }
-          <button type="submit" className="button">Register</button>
+          <button type="submit" className="button">Login</button>
         </form>
       </div>
     )
   }
 }
-

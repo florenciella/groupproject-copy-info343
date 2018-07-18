@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import searchIcon from '../../search.svg'
+import searchIcon from './search.svg'
 
-
-import './MovieSearch.css'
 
 class MovieSearch extends Component {
-    
     constructor(props){
       super()
-    
+
     }
 
     render () {
@@ -25,7 +22,7 @@ class MovieSearch extends Component {
             <div className="search-field">
                 <div style={search}></div>
                 <form>
-                    <input type="text" 
+                    <input type="text"
                     onChange={this.props.updateSearch}
                     value={this.props.searchValue}
                     placeholder="Search movies..."
