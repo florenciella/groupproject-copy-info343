@@ -1,5 +1,5 @@
 .material-icons {
-  padding-right: 4px;
+  padding-right: 8px;
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
-	background-color: black;
+	background-color: #181819;
 }
 
 .app{
@@ -26,7 +26,7 @@ body {
 
 .sidebar{
   min-width: 300px;
-  background-color: black;
+  background-color: #181819;
 }
 
 .header{
@@ -34,7 +34,7 @@ body {
   display: flex;
   height: 70px;
   align-items: center;
-  background-color: black;
+  background-color: #181819;
   justify-content: space-between;
 }
 .main{
@@ -65,7 +65,7 @@ hr {
 }
 
 .auth-form{
-  background-color: black;
+  background-color: #181819;
   padding: 20px;
   color: white;
   width: 500px;
@@ -90,8 +90,8 @@ hr {
 
 .auth-form .form-group input{
   padding: 10px 15px;
-  border: black solid 2px;
-  background-color: black;
+  border: #181819 solid 2px;
+  background-color: #181819;
   font-weight: 500;
   font-size: 16px;
   box-sizing : border-box;
@@ -145,7 +145,7 @@ color: white;
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0px;
-  background: black;
+  background: #181819;
 }
 
 .recent-movies-list{
@@ -223,7 +223,7 @@ img.recent-movie-poster{
   position: absolute;
   left: 0; right: 0;
   top: 0; bottom: 0;
-  background: black;
+  background: #181819;
 }
 
 .movie-header-backdrop{
@@ -257,7 +257,7 @@ img.recent-movie-poster{
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  background: black;
+  background: #181819;
 }
 
 .blank-profile{
@@ -404,8 +404,10 @@ img.movie-poster-img{
 }
 
 .runtime{
- margin-right: 15px;
- text-transform: uppercase;
+  display: flex;
+  align-content: center;
+   margin-right: 15px;
+   text-transform: uppercase;
 }
 .runtime h4{
   font-weight: 400;
@@ -429,7 +431,7 @@ img.movie-poster-img{
   max-height: 520px;
   overflow-y: scroll;
   width: 390px;
-  background-color: black;
+  background-color: #181819;
 }
 
 .movie-module-wrapper{
@@ -480,28 +482,28 @@ img.module-poster-img{
   margin: 0px;
   font-size: 13px;
   font-weight: 400;
-  color: black;
+  color: #181819;
 }
 
 .search-field{
     display: flex;
-    border: black;
-    padding: 5px 10px;
+    border: #181819;
+    color: white;
 }
 
 .search-field input{
     color: white;
-    padding-left: 20px;
+
     border: solid 0px transparent;
     height: 100%;
     box-sizing : border-box;
-    background-color: black;
+    background-color: #181819;
     font-weight: 500;
     font-size: 16px;
     width: 334px;
 }
 
-.search-field input::-webkit-input-placeholder {
+.search-field input::placeholder {
   color: white;
 }
 
@@ -513,7 +515,7 @@ img.module-poster-img{
 
 .user{
   display: flex;
-  background-color: black;
+  background-color: #181819;
   color: white;
   padding: 0px 0px 0px 20px;
   height: 70px;
@@ -522,33 +524,33 @@ img.module-poster-img{
 }
 
 .sidebar-title a{
+  margin-left: 12px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  padding: 20px;
   text-decoration: none;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: white;
-  border-bottom: white solid 1px;
 }
 
 .sidebar-title a:hover{
-  background-color: black;
+  background-color: #181819;
   color: #3454D1;
 }
 
 .sidebar-title h2{
-  margin: 0px;
   padding-left: 4px;
 }
 
 .watchlist-title h2{
-  color: white;
-  font-weight: 300;
+  padding-left: 18px;
+  padding-bottom: 8px;
+  color: #666;
+  font-weight: 400;
   font-size: 16px;
-  padding: 20px 0px 20px 20px;
-  background-color: black;
+  background-color: #181819;
   margin: 0px;
-  border-bottom: black solid 1px;
 }
 
 .moviedb ul{
@@ -565,11 +567,7 @@ img.module-poster-img{
 
 .moviedb ul li:hover{
   cursor: pointer;
-  background-color: black;
-}
-
-.checkbox{
-  margin-right: 10px;
+  background-color: #181819;
 }
 
 .login-user-mobile{
@@ -579,12 +577,7 @@ img.module-poster-img{
 .watchlist-module{
   display: flex;
   align-items: center;
-  border-bottom: black solid 1px;
-}
-
-.watchlist-module .checkbox{
-  flex-basis: 30px;
-  margin-left: 15px;
+  padding-left: 16px;
 }
 
 .App {
@@ -597,7 +590,7 @@ img.module-poster-img{
 }
 
 .App-header {
-  background-color: black;;
+  background-color: #181819;;
   height: 150px;
   padding: 20px;
   color: white;
@@ -605,6 +598,16 @@ img.module-poster-img{
 
 .App-intro {
   font-size: large;
+}
+
+.watchlist-module p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.watchlist-module i {
+  color: #2B45AC;
 }
 
 @media screen and (max-width: 950px){
@@ -618,7 +621,7 @@ img.module-poster-img{
     border-radius: 0px;
     padding: 10px 20px;
     text-align: left;
-    border-bottom: black solid 1px;
+    border-bottom: #181819 solid 1px;
   }
 
 	.search-field input{
@@ -627,10 +630,9 @@ img.module-poster-img{
 			 border: solid 0px transparent;
 			 height: 100%;
 			 box-sizing : border-box;
-			 background-color: black;
-			 font-weight: 500;
+			 background-color: #181819;
+			 font-weight: 400;
 			 font-size: 16px;
-			 font-family: 'Roboto', sans-serif;
 			 width: 100%;
 	 }
 }

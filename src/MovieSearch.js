@@ -9,18 +9,12 @@ class MovieSearch extends Component {
     }
 
     render () {
-        const search = {
-            height: '30px',
-            width: '30px',
-            backgroundImage: 'url(' + searchIcon + ')',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundColor: 'black'
-        }
+
         return (
             <div className="search-field">
-                <div style={search}></div>
+              <i className="material-icons">
+search
+</i>
                 <form>
                     <input type="text"
                     onChange={this.props.updateSearch}

@@ -56,17 +56,26 @@ home
 </i>Home</Link></h2>
             </div>
             <div className="watchlist-title">
-              <h2>Watchlist</h2>
+              <h2>My Watchlist</h2>
             </div>
             <div className="watchlist">
               <ul>
                 {this.props.watchList.map((movie)=>{
                   return (
                   <li className="watchlist-module" key={movie.id}>
-                    <input className="checkbox" type="checkbox" onChange={() => this.props.removeMovie(movie.id)} defaultChecked={movie.remove}/>
-                    <Link to={`/movie/${movie.id}`}>
-                      {movie.title}
-                    </Link>
+
+                    <p
+                      onClick={() => this.props.removeMovie(movie.id)}>
+                      <i className="material-icons">
+  check_box
+  </i>
+                      <Link to={`/${movie.id}`}>
+                        {movie.title}
+                      </Link>
+                    </p>
+
+
+
                   </li>
                   )
                 })}
