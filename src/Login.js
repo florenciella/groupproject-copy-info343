@@ -15,14 +15,22 @@ export default class Login extends Component {
           this.setState({loginMessage:'You need to register first.'})
         })
   }
+
   handleCloseModal () {
     this.props.closeModal();
   }
+
   render () {
     //log in with email
     return (
       <div className="auth-form">
-        <h1>Login</h1>
+        <div className='modal-header'>
+          <h1>Login</h1>
+          <i className="material-icons close"
+             onClick={this.handleCloseModal}>
+             close
+          </i>
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
@@ -34,7 +42,6 @@ export default class Login extends Component {
             <i>{this.state.loginMessage}</i>
           </div>
           <button type="submit" className="button">Login</button>
-          <button onClick={this.handleCloseModal} className="button">Close</button>
         </form>
       </div>
     )

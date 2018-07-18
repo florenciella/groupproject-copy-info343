@@ -68,6 +68,7 @@ hr {
 .auth-form{
   background-color: #333;
   padding: 20px;
+  border-radius: 4px;
   color: white;
   width: 500px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, .8);
@@ -101,35 +102,24 @@ hr {
   color: white;
 }
 
-<<<<<<< HEAD
-.auth-form input::placeholder {
-  color: #666;
-=======
-.auth-form input::-webkit-input-placeholder {
-  color: gray;
->>>>>>> 3986e33a2b85b0568c3377f10f06b264fda51651
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.auth-form input:-moz-placeholder { /* Firefox 18- */
-  color: gray;
-}
-
-.auth-form input::-moz-placeholder {  /* Firefox 19+ */
-color: gray;
-}
-
-.auth-form input:-ms-input-placeholder {
-<<<<<<< HEAD
-color: white;
+.close {
+  margin-top: 2px;
+  padding: 2px;
+  background-color: #2B45AC;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .error {
   margin-top: 4px;
   margin-bottom: 4px;
   color: red;
-=======
-color: gray;
->>>>>>> 3986e33a2b85b0568c3377f10f06b264fda51651
 }
 
 .login-user{
@@ -509,11 +499,7 @@ img.module-poster-img{
 }
 
 .search-field input::placeholder {
-<<<<<<< HEAD
   color: #666;
-=======
-  color: gray;
->>>>>>> 3986e33a2b85b0568c3377f10f06b264fda51651
 }
 
 .moviedb{

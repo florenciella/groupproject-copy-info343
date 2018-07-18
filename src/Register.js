@@ -12,7 +12,6 @@ export default class Register extends Component {
     super();
     this.state = { registerError: null }
     this.handleCloseModal = this.handleCloseModal.bind(this);
-
   }
 
   handleSubmit = (e) => {
@@ -21,6 +20,7 @@ export default class Register extends Component {
       .then(()=>{this.props.closeModal();})
       .catch(e => this.setState(setErrorMsg(e)))
   }
+  
   handleCloseModal () {
     this.props.closeModal();
   }
@@ -28,7 +28,13 @@ export default class Register extends Component {
   render () {
     return (
       <div className="auth-form">
-        <h1>Register</h1>
+        <div className='modal-header'>
+          <h1>Login</h1>
+          <i className="material-icons close"
+             onClick={this.handleCloseModal}>
+             close
+          </i>
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
@@ -36,15 +42,8 @@ export default class Register extends Component {
           <div className="form-group">
             <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
           </div>
-          {
-            this.state.registerError &&
-            <div className="modal-warning" role="alert">
-              <span className="sr-only">Error:</span>
-              &nbsp;{this.state.registerError}
-            </div>
-          }
+          {this.state.registerError}
           <button type="submit" className="button">Register</button>
-          <button onClick={this.handleCloseModal} className="button">Close</button>
         </form>
       </div>
     )
